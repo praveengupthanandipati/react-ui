@@ -5,4 +5,51 @@
 
 body {
   @include siteMain;
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $headingColor;
+  }
+}
+
+nav {
+  width: 20%;
+  background: lighten($primaryColor, 60%);
+  height: 99vh;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  margin-top: 5px;
+
+  li {
+    a {
+      width: 100%;
+      display: block;
+      text-decoration: none;
+      color: $textColor;
+      padding: 15px;
+      border-bottom: 1px solid $borderColor;
+    }
+    .active {
+      background: $primaryColor;
+      color: $white;
+    }
+  }
+}
+.rightContainer {
+  width: 80%;
+  padding: 20px 30px;
+
+  p {
+    font-size: $fsize;
+    letter-spacing: 0.3px;
+  }
 }
